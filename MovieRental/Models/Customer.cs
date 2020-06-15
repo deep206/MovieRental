@@ -1,11 +1,22 @@
 ﻿
 
+using Microsoft.Ajax.Utilities;
+using System.ComponentModel.DataAnnotations;
+
 namespace MovieRental.Models
 {
     public class Customer
     {
-        public int id { get; set; }
-        public int Id { get; internal set; }
+        public int Id { get; set; }
+        
+        [Required]
+        [StringLength(255)]
         public string Name { get; set; }
+
+        public bool IsSubscribedToNewsletter { get; set; }
+
+        public MembershipType MembershipType { get; set; }
+
+        public byte MembershipTypeId { get; set; }
     }
 }
