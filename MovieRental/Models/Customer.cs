@@ -1,6 +1,7 @@
 ﻿
 
 using Microsoft.Ajax.Utilities;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace MovieRental.Models
@@ -12,6 +13,9 @@ namespace MovieRental.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+
+        //[Display(Name = "Date of Birth")]
+        public DateTime? Birthdate { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
 
