@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using MovieRental.Models;
 
-namespace MovieRental.Models
+namespace MovieRental.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public int Id { get; set; }
 
@@ -13,13 +14,9 @@ namespace MovieRental.Models
 
         public bool IsSubscribedToNewsletter { get; set; }
 
-        public MembershipType MembershipType { get; set; }
-
-        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
-        [Display(Name = "Date of Birth")]
-        [Min18YearsIfAMember]
+        //        [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
     }
 }
